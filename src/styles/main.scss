@@ -13,6 +13,7 @@ body {
 }
 
 .calendar div {
+  display: none;
   box-sizing: border-box;
   height: 100px;
   width: 100px;
@@ -39,5 +40,15 @@ $week: (mon: 0, tue: 1, wed: 2, thu: 3, fri: 4, sat: 5, sun: 6);
 @each $day,$index in $week {
   .calendar-#{$day} div:first-child {
     margin-left: #{100 * $index + $index}px;
+  }
+}
+
+$month_length : 28, 29, 30, 31;
+
+@each $day in $month_length {
+  @for $i from 1 through $day {
+    .calendar-#{$day} div:nth-child(#{$i}) {
+      display: block;
+    }
   }
 }
