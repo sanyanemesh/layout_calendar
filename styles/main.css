@@ -5,8 +5,8 @@ body {
   font-size: 35px; }
 
 .calendar {
-  padding: 100px 300px;
-  max-width: 750px;
+  margin: 100px auto;
+  width: 710px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
